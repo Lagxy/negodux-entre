@@ -73,6 +73,12 @@ const MentorList = () => {
             <Link to="/umkm">
               <Button variant="ghost">UMKM</Button>
             </Link>
+            <Link to="/mentors">
+              <Button variant="ghost">Mentors</Button>
+            </Link>
+            <Link to="/faq">
+              <Button variant="ghost">FAQ</Button>
+            </Link>
             <Link to="/auth">
               <Button variant="outline">Login / Register</Button>
             </Link>
