@@ -70,8 +70,14 @@ const UmkmList = () => {
             <h1 className="text-2xl font-bold">UMKM Connect</h1>
           </Link>
           <div className="flex gap-4">
+            <Link to="/umkm">
+              <Button variant="ghost">UMKM</Button>
+            </Link>
             <Link to="/mentors">
               <Button variant="ghost">Mentors</Button>
+            </Link>
+            <Link to="/faq">
+              <Button variant="ghost">FAQ</Button>
             </Link>
             <Link to="/auth">
               <Button variant="outline">Login / Register</Button>
