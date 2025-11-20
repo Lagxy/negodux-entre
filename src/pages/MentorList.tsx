@@ -30,7 +30,7 @@ const mentorData = [
         expertise: "Supply Chain",
         experience: "15+ years in logistics and distribution",
         email: "budi.santoso@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-6.png",
         yearsOfExperience: 15,
     },
     {
@@ -40,7 +40,7 @@ const mentorData = [
         expertise: "Marketing",
         experience: "12+ years in digital marketing and branding",
         email: "dewi.lestari@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-1.png",
         yearsOfExperience: 12,
     },
     {
@@ -50,7 +50,7 @@ const mentorData = [
         expertise: "Finance",
         experience: "20+ years in financial planning and investment",
         email: "ahmad.wijaya@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-5.png",
         yearsOfExperience: 20,
     },
     {
@@ -60,7 +60,7 @@ const mentorData = [
         expertise: "International Trade",
         experience: "10+ years in export-import regulations",
         email: "siti.nurhaliza@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-2.png",
         yearsOfExperience: 10,
     },
     {
@@ -70,7 +70,7 @@ const mentorData = [
         expertise: "Operations",
         experience: "18+ years in production optimization",
         email: "rudi.hartono@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-4.png",
         yearsOfExperience: 18,
     },
     {
@@ -80,7 +80,7 @@ const mentorData = [
         expertise: "Branding",
         experience: "14+ years in brand development and design",
         email: "linda.kusuma@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-3.png",
         yearsOfExperience: 14,
     },
 ];

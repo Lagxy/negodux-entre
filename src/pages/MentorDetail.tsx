@@ -21,7 +21,7 @@ const mentorData = [
         expertise: "Supply Chain",
         experience: "15+ years in logistics and distribution",
         email: "budi.santoso@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-6.png",
         bio: "Seasoned supply chain professional with extensive experience in optimizing logistics operations for Indonesian SMEs. Specialized in distribution network design and inventory management systems.",
         education: "MBA in Operations Management, Universitas Indonesia",
         specializations: [
@@ -59,7 +59,7 @@ const mentorData = [
         expertise: "Marketing",
         experience: "12+ years in digital marketing and branding",
         email: "dewi.lestari@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-1.png",
         bio: "Digital marketing expert passionate about helping traditional Indonesian businesses transition to the digital age. Proven track record in e-commerce growth and social media strategy.",
         education: "Master in Marketing Communication, LSPR Jakarta",
         specializations: [
@@ -97,7 +97,7 @@ const mentorData = [
         expertise: "Finance",
         experience: "20+ years in financial planning and investment",
         email: "ahmad.wijaya@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-5.png",
         bio: "Experienced financial consultant specializing in SME financial restructuring and growth financing. Expert in helping businesses achieve financial sustainability and attract investors.",
         education:
             "Bachelor of Economics, Universitas Gadjah Mada; CFA Charter",
@@ -136,7 +136,7 @@ const mentorData = [
         expertise: "International Trade",
         experience: "10+ years in export-import regulations",
         email: "siti.nurhaliza@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-2.png",
         bio: "International trade expert with deep knowledge of export regulations and documentation. Specialized in helping Indonesian SMEs enter global markets with proper compliance.",
         education: "Master in International Business, Universitas Indonesia",
         specializations: [
@@ -174,7 +174,7 @@ const mentorData = [
         expertise: "Operations",
         experience: "18+ years in production optimization",
         email: "rudi.hartono@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-4.png",
         bio: "Operations excellence expert focused on improving production efficiency and quality management for manufacturing SMEs. Lean manufacturing and Six Sigma certified.",
         education:
             "Industrial Engineering, Institut Teknologi Bandung; Six Sigma Black Belt",
@@ -213,7 +213,7 @@ const mentorData = [
         expertise: "Branding",
         experience: "14+ years in brand development and design",
         email: "linda.kusuma@example.com",
-        image: "/business-mentor.png",
+        image: "/business-mentor-3.png",
         bio: "Creative branding specialist helping traditional Indonesian businesses modernize their brand identity while preserving cultural authenticity. Expert in packaging design and brand strategy.",
         education:
             "Bachelor of Design, Institut Seni Indonesia; Master in Brand Management",

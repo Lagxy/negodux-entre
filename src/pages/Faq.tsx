@@ -12,8 +12,8 @@ import Footer from "@/components/Footer";
 
 const faqData = [
     {
-        question: "What is UMKM Connect?",
-        answer: "UMKM Connect is a platform that bridges Small and Medium Enterprises (UMKM) with professional business mentors. We help businesses find the expertise they need to grow while offering mentors equity-based opportunities.",
+        question: "What is Negodux?",
+        answer: "Negodux is a platform that bridges Small and Medium Enterprises (UMKM) with professional business mentors. We help businesses find the expertise they need to grow while offering mentors equity-based opportunities.",
     },
     {
         question: "How does the equity reward system work?",
@@ -59,8 +59,8 @@ const Faq = () => {
                 </div>
 
                 <p className="text-muted-foreground mb-8 text-lg">
-                    Find answers to common questions about UMKM Connect and how
-                    our platform works.
+                    Find answers to common questions about Negodux and how our
+                    platform works.
                 </p>
 
                 <Accordion type="single" collapsible className="w-full">

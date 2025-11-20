@@ -31,7 +31,7 @@ const umkmData = [
         needs: "Supply chain optimization and distribution strategy",
         reward: "15%",
         category: "F&B",
-        image: "/umkm.png",
+        image: "/umkm-6.png",
     },
     {
         id: 2,
@@ -40,7 +40,7 @@ const umkmData = [
         needs: "E-commerce platform and digital marketing",
         reward: "20%",
         category: "Fashion",
-        image: "/umkm.png",
+        image: "/umkm-5.png",
     },
     {
         id: 3,
@@ -49,7 +49,7 @@ const umkmData = [
         needs: "Export documentation and international marketing",
         reward: "12%",
         category: "Manufacturing",
-        image: "/umkm.png",
+        image: "/umkm-4.png",
     },
     {
         id: 4,
@@ -58,7 +58,7 @@ const umkmData = [
         needs: "Branding and packaging design",
         reward: "18%",
         category: "F&B",
-        image: "/umkm.png",
+        image: "/umkm-3.png",
     },
     {
         id: 5,
@@ -67,7 +67,7 @@ const umkmData = [
         needs: "Retail strategy and partnership development",
         reward: "25%",
         category: "Beauty",
-        image: "/umkm.png",
+        image: "/umkm-2.png",
     },
     {
         id: 6,
@@ -76,7 +76,7 @@ const umkmData = [
         needs: "Quality management and production efficiency",
         reward: "16%",
         category: "Fashion",
-        image: "/umkm.png",
+        image: "/umkm-1.png",
     },
 ];
 
