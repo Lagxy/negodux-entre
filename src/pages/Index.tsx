@@ -23,10 +23,9 @@ const Index = () => {
                         Empowering Indonesian SMEs Through Expert Mentorship
                     </h2>
                     <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-                        UMKM Connect bridges the gap between growing businesses
-                        and experienced professionals. Help local enterprises
-                        thrive while earning equity stakes in promising
-                        ventures.
+                        Negodux bridges the gap between growing businesses and
+                        experienced professionals. Help local enterprises thrive
+                        while earning equity stakes in promising ventures.
                     </p>
                     <div className="flex gap-4 justify-center">
                         <Link to="/umkm">
