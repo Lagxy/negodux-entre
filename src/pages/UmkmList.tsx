@@ -1,8 +1,13 @@
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Building2 } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Building2, Search } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const umkmData = [
   {
@@ -62,37 +67,84 @@ const umkmData = [
 ];
 
 const UmkmList = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/">
-            <h1 className="text-2xl font-bold">UMKM Connect</h1>
-          </Link>
-          <div className="flex gap-4">
-            <Link to="/umkm">
-              <Button variant="ghost">UMKM</Button>
-            </Link>
-            <Link to="/mentors">
-              <Button variant="ghost">Mentors</Button>
-            </Link>
-            <Link to="/faq">
-              <Button variant="ghost">FAQ</Button>
-            </Link>
-            <Link to="/auth">
-              <Button variant="outline">Login / Register</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+  const [searchQuery, setSearchQuery] = useState("");
+  const [sortBy, setSortBy] = useState("default");
+  const [filterCategory, setFilterCategory] = useState("all");
 
-      <div className="container mx-auto px-4 py-8">
+  const categories = ["all", ...Array.from(new Set(umkmData.map(b => b.category)))];
+
+  const filteredAndSortedData = useMemo(() => {
+    let result = [...umkmData];
+
+    // Filter by search query
+    if (searchQuery) {
+      result = result.filter(business =>
+        business.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+    }
+
+    // Filter by category
+    if (filterCategory !== "all") {
+      result = result.filter(business => business.category === filterCategory);
+    }
+
+    // Sort by stake
+    if (sortBy === "stake-high") {
+      result.sort((a, b) => parseFloat(b.reward) - parseFloat(a.reward));
+    } else if (sortBy === "stake-low") {
+      result.sort((a, b) => parseFloat(a.reward) - parseFloat(b.reward));
+    }
+
+    return result;
+  }, [searchQuery, sortBy, filterCategory]);
+
+  return (
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
+
+      <div className="container mx-auto px-4 py-8 flex-1">
         <div className="flex items-center gap-2 mb-6">
           <Building2 className="h-6 w-6" />
           <h2 className="text-3xl font-bold">UMKM Businesses</h2>
         </div>
+
+        {/* Search and Filters */}
+        <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+            <Input
+              placeholder="Search by business name..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="pl-10"
+            />
+          </div>
+          <Select value={sortBy} onValueChange={setSortBy}>
+            <SelectTrigger>
+              <SelectValue placeholder="Sort by stake" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="default">Default</SelectItem>
+              <SelectItem value="stake-high">Stake: Highest to Lowest</SelectItem>
+              <SelectItem value="stake-low">Stake: Lowest to Highest</SelectItem>
+            </SelectContent>
+          </Select>
+          <Select value={filterCategory} onValueChange={setFilterCategory}>
+            <SelectTrigger>
+              <SelectValue placeholder="Filter by category" />
+            </SelectTrigger>
+            <SelectContent>
+              {categories.map(category => (
+                <SelectItem key={category} value={category}>
+                  {category === "all" ? "All Categories" : category}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {umkmData.map((business) => (
+          {filteredAndSortedData.map((business) => (
             <Card key={business.id} className="hover:shadow-lg transition-shadow overflow-hidden">
               <div className="aspect-video w-full overflow-hidden bg-muted">
                 <img 
@@ -130,6 +182,8 @@ const UmkmList = () => {
           ))}
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 };

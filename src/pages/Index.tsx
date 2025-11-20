@@ -1,31 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Building2, User, ArrowRight, Target, Handshake, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-card sticky top-0 z-10">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/">
-            <h1 className="text-2xl font-bold">UMKM Connect</h1>
-          </Link>
-          <div className="flex gap-4">
-            <Link to="/umkm">
-              <Button variant="ghost">UMKM</Button>
-            </Link>
-            <Link to="/mentors">
-              <Button variant="ghost">Mentors</Button>
-            </Link>
-            <Link to="/faq">
-              <Button variant="ghost">FAQ</Button>
-            </Link>
-            <Link to="/auth">
-              <Button variant="outline">Login / Register</Button>
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
 
       <div className="container mx-auto px-4">
         {/* Hero Section */}
@@ -109,6 +91,7 @@ const Index = () => {
           </div>
         </section>
       </div>
+      <Footer />
     </div>
   );
 };

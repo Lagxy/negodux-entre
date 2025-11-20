@@ -5,6 +5,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useNavigate } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Auth = () => {
   const [email, setEmail] = useState("");
@@ -26,8 +29,19 @@ const Auth = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4">
-      <Card className="w-full max-w-md">
+    <div className="min-h-screen bg-background flex flex-col">
+      <Header />
+      <div className="flex-1 flex items-center justify-center p-4">
+        <div className="w-full max-w-md">
+          <Button 
+            variant="ghost" 
+            onClick={() => navigate(-1)} 
+            className="mb-4"
+          >
+            <ArrowLeft className="mr-2 h-4 w-4" />
+            Back
+          </Button>
+          <Card className="w-full">
         <CardHeader>
           <CardTitle className="text-2xl font-bold">Welcome</CardTitle>
           <CardDescription>Login or create an account to continue</CardDescription>
@@ -101,6 +115,9 @@ const Auth = () => {
           </Tabs>
         </CardContent>
       </Card>
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 };
