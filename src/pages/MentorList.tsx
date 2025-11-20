@@ -119,8 +119,13 @@ const MentorList = () => {
                   </div>
                 </div>
               </CardContent>
-              <CardFooter>
-                <Button variant="outline" className="w-full">
+              <CardFooter className="flex gap-2">
+                <Link to={`/mentors/${mentor.id}`} className="flex-1">
+                  <Button variant="default" className="w-full">
+                    View Details
+                  </Button>
+                </Link>
+                <Button variant="outline" className="flex-1">
                   Contact Mentor
                 </Button>
               </CardFooter>

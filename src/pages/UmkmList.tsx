@@ -122,7 +122,9 @@ const UmkmList = () => {
                 </div>
               </CardContent>
               <CardFooter>
-                <Button className="w-full">View Details</Button>
+                <Link to={`/umkm/${business.id}`} className="w-full">
+                  <Button className="w-full">View Details</Button>
+                </Link>
               </CardFooter>
             </Card>
           ))}
