@@ -6,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import UmkmList from "./pages/UmkmList";
+import UmkmDetail from "./pages/UmkmDetail";
 import MentorList from "./pages/MentorList";
+import MentorDetail from "./pages/MentorDetail";
 import Faq from "./pages/Faq";
 import NotFound from "./pages/NotFound";
 
@@ -21,7 +23,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/umkm" element={<UmkmList />} />
+          <Route path="/umkm/:id" element={<UmkmDetail />} />
           <Route path="/mentors" element={<MentorList />} />
+          <Route path="/mentors/:id" element={<MentorDetail />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/auth" element={<Auth />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
